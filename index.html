@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage de Mariangeles & Nicolas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f7f5;
+            font-family: 'Cormorant Garamond', serif;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .elegant-script {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .heart {
+            color: #e75480;
+        }
+        
+        input, textarea, select {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            margin-top: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #e75480;
+            box-shadow: 0 0 5px rgba(231, 84, 128, 0.3);
+        }
+        
+        .btn {
+            background-color: #e75480;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn:hover {
+            background-color: #d64d73;
+        }
+        
+        .btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        .number-input {
+            display: flex;
+            align-items: center;
+        }
+        
+        .number-input button {
+            width: 40px;
+            height: 40px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .number-input input {
+            width: 60px;
+            text-align: center;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+        }
+        
+        .required::after {
+            content: " *";
+            color: #e75480;
+        }
+        
+        .bg-image {
+            background-image: url('https://i.imgur.com/66BaRbW.jpg');
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.2;
+        }
+        
+        label {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    
+    <div class="container mx-auto px-4 py-10">
+        <div class="form-container p-8">
+            <div class="text-center mb-10">
+                <h1 class="elegant-script text-6xl md:text-7xl mb-4">Mariage de Mariangeles & Nicolas <span class="heart">♥</span></h1>
+                <h2 class="elegant-script text-4xl md:text-5xl mb-2">Église L'Ange-Gardien</h2>
+                <h3 class="elegant-script text-3xl md:text-4xl mb-2">4 octobre 2025</h3>
+                <h3 class="elegant-script text-3xl md:text-4xl mb-4">14h00</h3>
+                <div class="text-center text-2xl heart mb-6">♥</div>
+                <p class="text-lg mb-6">
+                    Nous sommes ravis de partager ce jour si spécial avec les personnes qui comptent le plus pour nous. 
+                    Votre présence signifierait énormément alors que nous entamons ce merveilleux chapitre ensemble.
+                </p>
+                <p class="text-lg mb-6">
+                    Merci de nous faire savoir si vous pourrez être des nôtres en remplissant le formulaire ci-dessous. 
+                    Nous avons hâte de célébrer avec vous !
+                </p>
+            </div>
+            
+            <!-- Formulaire avec FormSubmit -->
+            <form id="weddingForm" class="space-y-6" action="https://formsubmit.co/mariagenicketmaria@gmail.com" method="POST">
+                <!-- Champs de configuration FormSubmit -->
+                <input type="hidden" name="_subject" value="Nouvelle réponse - Mariage Mariangeles & Nicolas">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://marianico25.github.io/marianic/merci.html?email={{email}}">
+                
+                <div>
+                    <label class="block mb-2 required"><span class="heart">♥</span> Courriel</label>
+                    <input type="email" name="email" id="email" required placeholder="Votre adresse courriel">
+                    <small class="text-gray-500">Ce formulaire enregistre les courriels.</small>
+                </div>
+                
+                <div>
+                    <label class="block mb-2 required"><span class="heart">♥</span> Votre Nom</label>
+                    <input type="text" name="name" id="name" required placeholder="Votre nom complet">
+                </div>
+                
+                <div>
+                    <label class="block mb-2 required"><span class="heart">♥</span> Est-ce que vous serez avec nous pour ce jour si spécial ?</label>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="attendance" value="Oui, avec grand plaisir !" required class="mr-2" onclick="updateAttendanceStatus(true)">
+                            Oui, avec grand plaisir !
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="attendance" value="Malheureusement, je ne pourrai pas être présent(e)" required class="mr-2" onclick="updateAttendanceStatus(false)">
+                            Malheureusement, je ne pourrai pas être présent(e).
+                        </label>
+                    </div>
+                </div>
+                
+                <div id="attendingFields" style="display: none;">
+                    <div>
+                        <label class="block mb-2"><span class="heart">♥</span> Si vous venez accompagné(e), merci de nous indiquer le prénom de votre invité(e) :</label>
+                        <input type="text" name="guest" id="guest" placeholder="Prénom de votre invité(e)">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2"><span class="music-note">🎵</span> Dites-nous une chanson qui vous fera danser – on essaiera de la passer pour vous !</label>
+                        <input type="text" name="song" id="song" placeholder="Titre de la chanson">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2"><span class="envelope">✉️</span> Partagez votre numéro de téléphone pour que nous puissions vous contacter si nécessaire :</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Votre numéro de téléphone">
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2"><span class="heart">♥</span> Y a-t-il autre chose que nous devrions savoir pour rendre votre expérience inoubliable ? Dites-le-nous !</label>
+                        <textarea name="message" id="message" rows="4" placeholder="Vos commentaires ou besoins particuliers"></textarea>
+                    </div>
+                    
+                    <div class="text-center text-2xl heart my-6">♥</div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="elegant-script text-xl font-semibold mb-4">Nombre d'invités</h3>
+                        
+                        <div class="mb-6">
+                            <label class="block mb-2">Nombre d'adultes (12 ans et plus)</label>
+                            <div class="number-input">
+                                <button type="button" class="rounded-l-md" onclick="decrementAdults()">-</button>
+                                <input type="number" name="adults" id="adults" value="2" min="1" readonly>
+                                <button type="button" class="rounded-r-md" onclick="incrementAdults()">+</button>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2">Nombre d'enfants (11 ans et moins)</label>
+                            <div class="number-input">
+                                <button type="button" class="rounded-l-md" onclick="decrementChildren()">-</button>
+                                <input type="number" name="children" id="children" value="0" min="0" readonly>
+                                <button type="button" class="rounded-r-md" onclick="incrementChildren()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg mt-6">
+                        <p class="mb-4">
+                            Merci de votre présence à notre journée spéciale. Pour confirmer votre participation, 
+                            une contribution est requise.
+                        </p>
+                        
+                        <div class="mb-2">
+                            <label class="block mb-2 required"><span class="heart">♥</span> Contribution (en $)</label>
+                            <input type="number" name="contribution" id="contribution" min="0" required placeholder="Montant">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="notAttendingFields" style="display: none;">
+                    <div>
+                        <label class="block mb-2"><span class="heart">♥</span> Souhaitez-vous nous laisser un message ?</label>
+                        <textarea name="decline_message" id="decline_message" rows="4" placeholder="Votre message (optionnel)"></textarea>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <button type="submit" id="submitBtn" class="btn px-8 py-3 text-lg">
+                        Confirmer ma réponse
+                    </button>
+                    <p class="text-sm text-gray-500 mt-2">
+                        En cliquant sur "Confirmer ma réponse", vos informations seront envoyées aux mariés par email à mariagenicketmaria@gmail.com
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Variables pour suivre les nombres d'invités
+        let adultsCount = 2;
+        let childrenCount = 0;
+        let isAttending = null;
+        
+        // Fonctions pour incrémenter/décrémenter les compteurs
+        function incrementAdults() {
+            adultsCount++;
+            document.getElementById('adults').value = adultsCount;
+            checkContribution();
+        }
+        
+        function decrementAdults() {
+            if (adultsCount > 1) {
+                adultsCount--;
+                document.getElementById('adults').value = adultsCount;
+                checkContribution();
+            }
+        }
+        
+        function incrementChildren() {
+            childrenCount++;
+            document.getElementById('children').value = childrenCount;
+        }
+        
+        function decrementChildren() {
+            if (childrenCount > 0) {
+                childrenCount--;
+                document.getElementById('children').value = childrenCount;
+            }
+        }
+        
+        // Vérifier si la contribution est suffisante et activer/désactiver le bouton de soumission
+        function checkContribution() {
+            const contributionField = document.getElementById('contribution');
+            const submitBtn = document.getElementById('submitBtn');
+            const minContribution = adultsCount * 100;
+            
+            if (!isAttending) {
+                submitBtn.disabled = false;
+                return;
+            }
+            
+            if (!contributionField.value || parseInt(contributionField.value) < minContribution) {
+                submitBtn.disabled = true;
+            } else {
+                submitBtn.disabled = false;
+            }
+        }
+        
+        // Mettre à jour l'affichage en fonction de la présence
+        function updateAttendanceStatus(attending) {
+            isAttending = attending;
+            
+            if (attending) {
+                document.getElementById('attendingFields').style.display = 'block';
+                document.getElementById('notAttendingFields').style.display = 'none';
+            } else {
+                document.getElementById('attendingFields').style.display = 'none';
+                document.getElementById('notAttendingFields').style.display = 'block';
+                document.getElementById('submitBtn').disabled = false;
+            }
+            
+            checkContribution();
+        }
+        
+        // Ajouter des écouteurs d'événements
+        document.addEventListener('DOMContentLoaded', function() {
+            const contributionField = document.getElementById('contribution');
+            contributionField.addEventListener('input', checkContribution);
+            
+            // Désactiver le bouton de soumission par défaut
+            document.getElementById('submitBtn').disabled = true;
+        });
+    </script>
+</body>
+</html>
